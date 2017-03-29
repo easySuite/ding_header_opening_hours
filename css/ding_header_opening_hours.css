@@ -1,0 +1,22 @@
+.pane-opened-libraries {
+  color: #FFFFFF;
+}
+.pane-opened-libraries .pane-title {
+  float: left;
+}
+.pane-opened-libraries .pane-content {
+  clear: both;
+}
+.pane-opened-libraries span.oh-plus:hover {
+  cursor: pointer;
+}
+.pane-opened-libraries span.oh-plus:after {
+  font-family: "FontAwesome";
+  content: "\f055";
+  padding-left: 10px;
+  margin-top: 8px;
+  position: absolute;
+  display: inline;
+  color: white;
+  font-size: 24px;
+}

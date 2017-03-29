@@ -1,0 +1,87 @@
+<?php
+/**
+ * @file
+ * Represents definition of DB schema and all installation tasks.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function ding_header_opening_hours_install() {
+  ding_header_opening_hours_add_panes();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ding_header_opening_hours_uninstall() {
+  ding_header_opening_hours_remove_panes();
+}
+
+/**
+ * Helper function for adding pane to specific pages.
+ */
+function ding_header_opening_hours_add_panes() {
+  $settings = array(
+    'task' => page_manager_get_task('site_template'),
+    'name' => 'site_template_panel_context',
+    'subtask' => '',
+    'position' => 1,
+    'region' => 'branding',
+  );
+
+  ctools_include('plugins');
+  ctools_get_plugins('page_manager', 'task_handlers', 'panel_context');
+  $handler = page_manager_load_task_handler($settings['task'], $settings['subtask'], $settings['name']);
+  $display = panels_panel_context_get_display($handler);
+
+  $pane = new stdClass();
+  $pane->pid = 'new-3bddb5f5-2373-49c7-9c58-60b56ce59a00';
+  $pane->panel = 'branding';
+  $pane->type = 'opened_libraries';
+  $pane->subtype = 'opened_libraries';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = $settings['position'];
+  $pane->locks = array();
+  $pane->uuid = '3bddb5f5-2373-49c7-9c58-60b56ce59a00';
+  $display->content['new-3bddb5f5-2373-49c7-9c58-60b56ce59a00'] = $pane;
+  $original = $display->panels['branding'];
+  array_splice($original, $settings['position'], 0, 'new-3bddb5f5-2373-49c7-9c58-60b56ce59a00');
+  $display->panels['branding'] = $original;
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  page_manager_save_task_handler($handler);
+}
+
+/**
+ * Helper function for removing pane to specific pages.
+ */
+function ding_header_opening_hours_remove_panes() {
+  $settings = array(
+    'task' => page_manager_get_task('site_template'),
+    'name' => 'site_template_panel_context',
+    'subtask' => '',
+    'position' => 1,
+    'region' => 'branding',
+  );
+
+  ctools_include('plugins');
+  ctools_get_plugins('page_manager', 'task_handlers', 'panel_context');
+  $handler = page_manager_load_task_handler($settings['task'], $settings['subtask'], $settings['name']);
+  $display = panels_panel_context_get_display($handler);
+  $display->content = array_filter($display->content, function ($i) {
+    return $i->type != 'opened_libraries';
+  });
+  unset($display->panels['main_content'][$settings['position']]);
+  $handler->conf['display'] = $display;
+  page_manager_save_task_handler($handler);
+}

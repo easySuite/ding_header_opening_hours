@@ -1,0 +1,11 @@
+name = Ding Header Opening hours
+description = Displays an simplified Opening Hours block in site header.
+core = 7.x
+version = 7.x-1.0
+package = Ding!
+dependencies[] = panels
+dependencies[] = opening_hours
+dependencies[] = ding_library_opening_hours
+
+stylesheets[all][] = css/ding_header_opening_hours.css
+scripts[] = js/ding_header_opening_hours.js
