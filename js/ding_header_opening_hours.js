@@ -13,7 +13,12 @@
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).toggle();
         });
 
-        $('.pane-opened-libraries').on('mouseleave', function() {
+        $('.panel-pane pane-opened-libraries').on('mouseleave', function() {
+          $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).toggle();
+        });
+
+        $('.oh-plus').on('click', function() {
+          if($('body').hasClass('responsive-layout-mobile')) return;
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).toggle();
         });
       });
