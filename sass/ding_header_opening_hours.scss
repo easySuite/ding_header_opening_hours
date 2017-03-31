@@ -1,5 +1,224 @@
+@import "zen-grids";
+@import "_mixins";
+
+/* Colors variables
+   ========================================================================== */
+
+$white:                   #fff;
+$dark-gray:               #ccc;
+$darker-gray:             #333;
+$light-gray:              #dadada;
+$lighter-gray:            #e5e5e5;
+$gray:                    #ccc;
+$black:                   #000;
+$gray-transparent-bg:     rgba( 0, 0, 0, 0.7);
+$zen-columns:             12;
+
+.site-header .topbar .topbar-inner {
+  overflow: initial;
+  min-height: 89px;
+}
+
+.not-logged-in {
+  .pane-opened-libraries {
+    @include zen-grid-item(3, 7.5);
+
+    + .topbar-menu {
+      @include zen-grid-item(3, 1,right);
+    }
+
+    @include medium() {
+     @include zen-grid-item (3, 5.8);
+      width: 39%;
+
+      h2.opened-processed {
+        margin: 18px 0 0 0;
+        font-size: 18px;
+      }
+
+      span.oh-plus:after {
+        padding-left: 10px;
+        margin-top: 18px;
+        font-size: 18px;
+      }
+
+      .left,
+      .right {
+        padding-right: 0;
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today-all {
+        width: 340px !important;
+        position: absolute;
+        left: -30px;
+
+        .ohs-wrapper .oh-row .right {
+          padding: 0 !important;
+         }
+
+        .oh-row .left {
+          width: 12em;
+        }
+
+        .oh-row-wrapper {
+          padding: 0;
+
+          .oh-row {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    @include small() {
+      @include zen-grid-item (3, 5.5);
+
+      + .topbar-menu {
+        @include zen-grid-item(6, 1,right);
+        margin-top: 0;
+      }
+
+      h2.opened-processed {
+        margin: 46px 0 0 0;
+        font-size: 16px;
+        position: absolute;
+      }
+
+      span.oh-plus:after {
+        padding-left: 10px;
+        margin-top: 57px;
+        font-size: 22px;
+        right: 0;
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today-all {
+        width: 300px !important;
+        position: absolute;
+        top: 100px;
+        left: -110px;
+
+        .ohs-wrapper .oh-row .right {
+          padding: 5px 0 0 0 !important;
+        }
+
+        .oh-row .left {
+          width: 12em !important;
+        }
+
+        .oh-row-wrapper {
+          padding: 0;
+
+          .oh-row {
+            padding-right: 5px;
+          }
+        }
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today{
+        display: none;
+      }
+    }
+  }
+}
+
+.logged-in {
+  .pane-notifications-top-menu {
+    @include zen-grid-item(3, 5.8);
+  }
+
+  @include medium() {
+    .pane-notifications-top-menu {
+      @include zen-grid-item(3, 7);
+      position: absolute;
+      top: 20px;
+    }
+  }
+
+  @include small() {
+    .pane-notifications-top-menu {
+      @include zen-grid-item(4, 3.5);
+      position: absolute;
+      top: 20px;
+    }
+  }
+
+  .pane-opened-libraries {
+    @include zen-grid-item(3, 4.5);
+
+    + .topbar-menu {
+      @include zen-grid-item(5, 1,right);
+    }
+
+    @include medium() {
+     @include zen-grid-item (4, 4);
+
+      width: 38%;
+      + .topbar-menu {
+        @include zen-grid-item(6, 1,right);
+      }
+    }
+
+    @include small() {
+      @include zen-grid-item (3, 1);
+
+      + .topbar-menu {
+        @include zen-grid-item(6, 1,right);
+        margin-top: 0;
+      }
+
+      h2.opened-processed {
+        margin: 50px 0 0 0;
+        font-size: 16px;
+        position: absolute;
+      }
+
+      span.oh-plus:after {
+        padding-left: 10px;
+        margin-top: 55px;
+        font-size: 20px;
+        right: 0;
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today-all {
+        width: 300px !important;
+        position: absolute;
+        top: 100px;
+        left: 35px;
+
+        .ohs-wrapper .oh-row .right {
+          padding: 5px 0 0 0 !important;
+        }
+
+        .oh-row .left {
+          width: 12em !important;
+        }
+
+        .oh-row-wrapper {
+          padding: 0;
+
+          .oh-row {
+            padding-right: 5px;
+          }
+        }
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today{
+        display: none;
+      }
+    }
+  }
+}
+
 .pane-opened-libraries {
-  color: #FFFFFF;
+  position: relative;
+  color: $white;
+  padding-left: 15px;
+
+  .ohs-wrapper {
+    .oh-wrapper {
+      line-height: 20px;
+    }
+  }
 
   .pane-title {
     float: left;
@@ -7,21 +226,84 @@
 
   .pane-content {
     clear: both;
+
+    #block-ding-header-opening-hours-ding-header-opened-today-all {
+      position: absolute;
+      z-index: 100;
+      width: 350px;
+      background-color: $light-gray;
+      border-radius: 5px;
+
+      h2 {
+        padding-left: 10px;
+        color: $darker-gray;
+        margin-bottom: 0;
+      }
+
+      .content {
+        color: $darker-gray;
+      }
+
+      .ohs-wrapper {
+        .oh-row-wrapper {
+          background: $lighter-gray;
+          padding: 5px 0;
+
+          .oh-row {
+            line-height: 10px;
+          }
+        }
+
+        .oh-row-wrapper:nth-of-type(2n+2){
+          background: $light-gray;
+        }
+
+        .oh-row .right {
+          float: right;
+          padding: 5px 10px 5px 0;
+        }
+
+        .oh-row .left {
+          white-space: nowrap;
+          width: 15em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+          padding: 5px 0 5px 10px;
+        }
+      }
+    }
   }
 
   span.oh-plus {
     &:hover {
       cursor: pointer;
     }
+
     &:after {
       font-family: "FontAwesome";
       content: "\f055";
       padding-left: 10px;
-      margin-top: 8px;
+      margin-top: 19px;
       position: absolute;
       display: inline;
       color: white;
       font-size: 24px;
     }
+  }
+
+  .left,
+  .right {
+    display: inline;
+    padding-right: 10px;
+  }
+
+  .oh-wrapper .right {
+    float: right;
+  }
+
+  h2.opened-processed {
+    margin: 15px 0 0 0;
+    font-size: 24px;
   }
 }
