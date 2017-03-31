@@ -59,6 +59,7 @@
     padding-left: 10px;
     margin-top: 18px;
     font-size: 18px;
+    z-index: 10;
   }
   .not-logged-in .pane-opened-libraries .left,
   .not-logged-in .pane-opened-libraries .right {
@@ -86,7 +87,7 @@
   .not-logged-in .pane-opened-libraries {
     float: left;
     width: 25%;
-    margin-left: 37.5%;
+    margin-left: 25%;
     margin-right: -100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -116,12 +117,13 @@
     margin-top: 57px;
     font-size: 22px;
     right: 0;
+    z-index: 10;
   }
   .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
     width: 300px !important;
     position: absolute;
-    top: 100px;
-    left: -110px;
+    top: 85px;
+    left: -70px;
   }
   .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .right {
     padding: 5px 0 0 0 !important;
@@ -262,6 +264,7 @@
     margin-top: 55px;
     font-size: 20px;
     right: 0;
+    z-index: 10;
   }
   .logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
     width: 300px !important;
@@ -361,4 +364,7 @@
 .pane-opened-libraries h2.opened-processed {
   margin: 15px 0 0 0;
   font-size: 24px;
+}
+.pane-opened-libraries h2.opened-processed:hover {
+  cursor: pointer;
 }
