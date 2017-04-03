@@ -12,7 +12,7 @@
 /* Colors variables
    ========================================================================== */
 .site-header .topbar .topbar-inner {
-  overflow: initial;
+  overflow: visible;
   min-height: 89px;
 }
 
