@@ -1,0 +1,370 @@
+/**
+ * Mixins
+ *
+ * @author magnify
+ */
+/* Breakpoints
+   ========================================================================== */
+/* Media query
+   ========================================================================== */
+/* Breakpoints
+   ========================================================================== */
+/* Colors variables
+   ========================================================================== */
+.site-header .topbar .topbar-inner {
+  overflow: initial;
+  min-height: 89px;
+}
+
+.not-logged-in .pane-opened-libraries {
+  float: left;
+  width: 25%;
+  margin-left: 54.16667%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.not-logged-in .pane-opened-libraries + .topbar-menu {
+  float: right;
+  width: 25%;
+  margin-right: 0%;
+  margin-left: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .not-logged-in .pane-opened-libraries {
+    float: left;
+    width: 25%;
+    margin-left: 40%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 39%;
+  }
+  .not-logged-in .pane-opened-libraries h2.opened-processed {
+    margin: 18px 0 0 0;
+    font-size: 18px;
+  }
+  .not-logged-in .pane-opened-libraries span.oh-plus:after {
+    padding-left: 10px;
+    margin-top: 18px;
+    font-size: 18px;
+    z-index: 10;
+  }
+  .not-logged-in .pane-opened-libraries .left,
+  .not-logged-in .pane-opened-libraries .right {
+    padding-right: 0;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
+    width: 340px !important;
+    position: absolute;
+    left: -30px;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .right {
+    padding: 0 !important;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row .left {
+    width: 12em;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row-wrapper {
+    padding: 0;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row-wrapper .oh-row {
+    padding-right: 5px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .not-logged-in .pane-opened-libraries {
+    float: left;
+    width: 25%;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .not-logged-in .pane-opened-libraries + .topbar-menu {
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+  }
+  .not-logged-in .pane-opened-libraries h2.opened-processed {
+    margin: 46px 0 0 0;
+    font-size: 16px;
+    position: absolute;
+  }
+  .not-logged-in .pane-opened-libraries span.oh-plus:after {
+    padding-left: 10px;
+    margin-top: 57px;
+    font-size: 22px;
+    right: 0;
+    z-index: 10;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
+    width: 300px !important;
+    position: absolute;
+    top: 85px;
+    left: -70px;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .right {
+    padding: 5px 0 0 0 !important;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row .left {
+    width: 12em !important;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row-wrapper {
+    padding: 0;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row-wrapper .oh-row {
+    padding-right: 5px;
+  }
+  .not-logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today {
+    display: none;
+  }
+}
+
+.logged-in .pane-notifications-top-menu {
+  float: left;
+  width: 25%;
+  margin-left: 40%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .logged-in .pane-notifications-top-menu {
+    float: left;
+    width: 25%;
+    margin-left: 50%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .logged-in .pane-notifications-top-menu {
+    float: left;
+    width: 33.33333%;
+    margin-left: 20.83333%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+  }
+}
+.logged-in .pane-opened-libraries {
+  float: left;
+  width: 25%;
+  margin-left: 29.16667%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.logged-in .pane-opened-libraries + .topbar-menu {
+  float: right;
+  width: 41.66667%;
+  margin-right: 0%;
+  margin-left: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .logged-in .pane-opened-libraries {
+    float: left;
+    width: 33.33333%;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 38%;
+  }
+  .logged-in .pane-opened-libraries + .topbar-menu {
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .logged-in .pane-opened-libraries {
+    float: left;
+    width: 25%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .logged-in .pane-opened-libraries + .topbar-menu {
+    float: right;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+  }
+  .logged-in .pane-opened-libraries h2.opened-processed {
+    margin: 50px 0 0 0;
+    font-size: 16px;
+    position: absolute;
+  }
+  .logged-in .pane-opened-libraries span.oh-plus:after {
+    padding-left: 10px;
+    margin-top: 55px;
+    font-size: 20px;
+    right: 0;
+    z-index: 10;
+  }
+  .logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
+    width: 300px !important;
+    position: absolute;
+    top: 100px;
+    left: 35px;
+  }
+  .logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .right {
+    padding: 5px 0 0 0 !important;
+  }
+  .logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row .left {
+    width: 12em !important;
+  }
+  .logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row-wrapper {
+    padding: 0;
+  }
+  .logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all .oh-row-wrapper .oh-row {
+    padding-right: 5px;
+  }
+  .logged-in .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today {
+    display: none;
+  }
+}
+
+.pane-opened-libraries {
+  position: relative;
+  color: #fff;
+  padding-left: 15px;
+}
+.pane-opened-libraries .ohs-wrapper .oh-wrapper {
+  line-height: 20px;
+}
+.pane-opened-libraries .pane-title {
+  float: left;
+}
+.pane-opened-libraries .pane-content {
+  clear: both;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
+  position: absolute;
+  z-index: 100;
+  width: 350px;
+  background-color: #dadada;
+  border-radius: 5px;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all h2 {
+  padding-left: 10px;
+  color: #333;
+  margin-bottom: 0;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .content {
+  color: #333;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row-wrapper {
+  background: #e5e5e5;
+  padding: 5px 0;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row-wrapper .oh-row {
+  line-height: 10px;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row-wrapper:nth-of-type(2n+2) {
+  background: #dadada;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .right {
+  float: right;
+  padding: 5px 10px 5px 0;
+}
+.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
+  white-space: nowrap;
+  width: 15em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+}
+.pane-opened-libraries span.oh-plus:hover {
+  cursor: pointer;
+}
+.pane-opened-libraries span.oh-plus:after {
+  font-family: "FontAwesome";
+  content: "\f055";
+  padding-left: 10px;
+  margin-top: 19px;
+  position: absolute;
+  display: inline;
+  color: white;
+  font-size: 24px;
+}
+.pane-opened-libraries .left,
+.pane-opened-libraries .right {
+  display: inline;
+  padding-right: 10px;
+}
+.pane-opened-libraries .oh-wrapper .right {
+  float: right;
+}
+.pane-opened-libraries h2.opened-processed {
+  margin: 15px 0 0 0;
+  font-size: 24px;
+}
+.pane-opened-libraries h2.opened-processed:hover {
+  cursor: pointer;
+}
