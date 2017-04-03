@@ -17,7 +17,7 @@
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
         });
 
-        $('.oh-plus').click(function() {
+        $('.oh-plus').on('click',function() {
           if(!$('body').hasClass('responsive-layout-mobile')) return;
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).toggle();
         });
