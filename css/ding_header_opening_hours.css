@@ -19,13 +19,14 @@
 .not-logged-in.page-search .pane-opened-libraries {
   float: left;
   width: 25%;
-  margin-left: 66.66667%;
+  margin-left: 70.83333%;
   margin-right: -100%;
   padding-left: 10px;
   padding-right: 10px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  width: 21%;
 }
 .not-logged-in.page-search .pane-opened-libraries + .topbar-menu {
   float: right;
