@@ -12,9 +12,9 @@
     <?php foreach ($library['opening_hours'] as $key => $value): ?>
       <div class="oh-wrapper">
         <?php if ($key == 0): ?>
-          <div class="left"><?php print $library['title']; ?></div>
+          <div class="left"><?php print $library['title']; ?>:</div>
         <?php else: ?>
-          <div class="left"><?php print $value['notice']; ?></div>
+          <div class="left"><?php print $value['notice']; ?>:</div>
         <?php endif; ?>
         <div class="right"><?php print $value['start_time']; ?> - <?php print $value['end_time']; ?></div>
       </div>

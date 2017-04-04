@@ -20,16 +20,67 @@ $zen-columns:             12;
 }
 
 .not-logged-in {
+  &.page-search {
+    .pane-opened-libraries {
+      @include zen-grid-item(3, 9.5);
+      width: 21%;
+
+      + .topbar-menu {
+        @include zen-grid-item(2, 1, right);
+      }
+    }
+  }
+
+  @include small() {
+    &.page-search {
+      .pane-opened-libraries {
+        @include zen-grid-item(3, 6.5);
+
+        + .topbar-menu {
+          @include zen-grid-item(4, 1, right);
+        }
+
+        #block-ding-header-opening-hours-ding-header-opened-today-all {
+          width: 300px !important;
+          position: absolute;
+          top: 85px;
+          left: -138px;
+        }
+      }
+    }
+  }
+
+  @include medium() {
+    &.page-search {
+      .pane-opened-libraries {
+        @include zen-grid-item(3, 7.8);
+        width: 30%;
+
+        + .topbar-menu {
+          @include zen-grid-item(2, 1, right);
+        }
+
+        #block-ding-header-opening-hours-ding-header-opened-today-all {
+          width: 300px !important;
+          position: absolute;
+          top: 85px;
+          left: -138px;
+        }
+      }
+    }
+  }
+
   .pane-opened-libraries {
-    @include zen-grid-item(3, 7.5);
+    @include zen-grid-item(3, 8.3);
+    width: 21%;
 
     + .topbar-menu {
-      @include zen-grid-item(3, 1,right);
+      @include zen-grid-item(2.8, 1, right);
     }
 
     @include medium() {
-     @include zen-grid-item (3, 5.8);
-      width: 39%;
+     @include zen-grid-item (3, 7.2);
+      width: 31%;
 
       h2.opened-processed {
         margin: 18px 0 0 0;
@@ -75,7 +126,7 @@ $zen-columns:             12;
       @include zen-grid-item (3, 4);
 
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
         margin-top: 0;
       }
 
@@ -124,13 +175,59 @@ $zen-columns:             12;
 }
 
 .logged-in {
+  &.page-search {
+    .pane-notifications-top-menu {
+      @include zen-grid-item(3, 6.5);
+      width: 39%;
+    }
+
+    .pane-opened-libraries {
+      @include zen-grid-item(3, 6.5);
+      width: 21%;
+
+      + .topbar-menu {
+        @include zen-grid-item(3, 1, right);
+      }
+    }
+
+    @include medium() {
+      .pane-opened-libraries {
+        display: none;
+
+        + .topbar-menu {
+          @include zen-grid-item(6, 1, right);
+        }
+      }
+
+      .pane-notifications-top-menu {
+        @include zen-grid-item(3, 3);
+        width: 65%;
+      }
+    }
+
+    @include small() {
+      .pane-opened-libraries {
+        display: none;
+
+        + .topbar-menu {
+          @include zen-grid-item(6, 1, right);
+        }
+      }
+
+      .pane-notifications-top-menu {
+        @include zen-grid-item(3, 2);
+        width: 65%;
+      }
+    }
+  }
+
   .pane-notifications-top-menu {
-    @include zen-grid-item(3, 5.8);
+    @include zen-grid-item(3, 6.3);
   }
 
   @include medium() {
     .pane-notifications-top-menu {
-      @include zen-grid-item(3, 7);
+      @include zen-grid-item(4, 6.2);
       position: absolute;
       top: 20px;
     }
@@ -145,18 +242,18 @@ $zen-columns:             12;
   }
 
   .pane-opened-libraries {
-    @include zen-grid-item(3, 4.5);
+    @include zen-grid-item(3, 5.5);
+    width: 21%;
 
     + .topbar-menu {
-      @include zen-grid-item(5, 1,right);
+      @include zen-grid-item(5, 1, right);
     }
 
     @include medium() {
-     @include zen-grid-item (4, 4);
+     @include zen-grid-item (4, 5);
 
-      width: 38%;
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
       }
     }
 
@@ -164,7 +261,7 @@ $zen-columns:             12;
       @include zen-grid-item (3, 1);
 
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
         margin-top: 0;
       }
 
@@ -207,6 +304,36 @@ $zen-columns:             12;
 
       #block-ding-header-opening-hours-ding-header-opened-today{
         display: none;
+      }
+    }
+  }
+
+  &.responsive-layout-tablet {
+    .pane-notifications-top-menu {
+      @include zen-grid-item(3, 5);
+      width: 41%;
+    }
+
+    .pane-opened-libraries {
+      @include zen-grid-item(3, 4);
+
+      + .topbar-menu {
+        @include zen-grid-item(6, 1, right);
+      }
+    }
+  }
+
+  &.page-search.responsive-layout-tablet {
+    .pane-notifications-top-menu {
+      @include zen-grid-item(3, 6);
+      width: 41%;
+    }
+
+    .pane-opened-libraries {
+      @include zen-grid-item(3, 5.5);
+
+      + .topbar-menu {
+        @include zen-grid-item(6, 1, right);
       }
     }
   }
