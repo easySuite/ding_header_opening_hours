@@ -22,7 +22,8 @@ $zen-columns:             12;
 .not-logged-in {
   &.page-search {
     .pane-opened-libraries {
-      @include zen-grid-item(3, 9);
+      @include zen-grid-item(3, 9.5);
+      width: 21%;
 
       + .topbar-menu {
         @include zen-grid-item(2, 1,right);
