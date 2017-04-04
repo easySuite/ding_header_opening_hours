@@ -172,6 +172,36 @@ $zen-columns:             12;
       }
     }
   }
+
+  &.responsive-layout-tablet {
+    .pane-opened-libraries {
+      @include zen-grid-item(3, 7.5);
+
+      + .topbar-menu {
+        @include zen-grid-item(3, 1, right);
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today-all {
+        left: -63px;
+        top: 83px;
+      }
+    }
+  }
+
+  &.page-search.responsive-layout-tablet {
+    .pane-opened-libraries {
+      @include zen-grid-item(3, 9);
+
+      + .topbar-menu {
+        @include zen-grid-item(3, 1, right);
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today-all {
+        left: -63px;
+        top: 83px;
+      }
+    }
+  }
 }
 
 .logged-in {
@@ -320,6 +350,11 @@ $zen-columns:             12;
       + .topbar-menu {
         @include zen-grid-item(6, 1, right);
       }
+
+      #block-ding-header-opening-hours-ding-header-opened-today-all {
+        left: -63px;
+        top: 83px;
+      }
     }
   }
 
@@ -334,6 +369,11 @@ $zen-columns:             12;
 
       + .topbar-menu {
         @include zen-grid-item(6, 1, right);
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today-all {
+        left: -63px;
+        top: 83px;
       }
     }
   }
@@ -363,6 +403,7 @@ $zen-columns:             12;
       width: 350px;
       background-color: $light-gray;
       border-radius: 5px;
+      overflow: hidden;
 
       h2 {
         padding-left: 10px;

@@ -226,6 +226,58 @@
     display: none;
   }
 }
+.not-logged-in.responsive-layout-tablet .pane-opened-libraries {
+  float: left;
+  width: 25%;
+  margin-left: 54.16667%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.not-logged-in.responsive-layout-tablet .pane-opened-libraries + .topbar-menu {
+  float: right;
+  width: 25%;
+  margin-right: 0%;
+  margin-left: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.not-logged-in.responsive-layout-tablet .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
+  left: -63px;
+  top: 83px;
+}
+.not-logged-in.page-search.responsive-layout-tablet .pane-opened-libraries {
+  float: left;
+  width: 25%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.not-logged-in.page-search.responsive-layout-tablet .pane-opened-libraries + .topbar-menu {
+  float: right;
+  width: 25%;
+  margin-right: 0%;
+  margin-left: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.not-logged-in.page-search.responsive-layout-tablet .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
+  left: -63px;
+  top: 83px;
+}
 
 .logged-in.page-search .pane-notifications-top-menu {
   float: left;
@@ -498,6 +550,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.logged-in.responsive-layout-tablet .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
+  left: -63px;
+  top: 83px;
+}
 .logged-in.page-search.responsive-layout-tablet .pane-notifications-top-menu {
   float: left;
   width: 25%;
@@ -532,6 +588,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.logged-in.page-search.responsive-layout-tablet .pane-opened-libraries #block-ding-header-opening-hours-ding-header-opened-today-all {
+  left: -63px;
+  top: 83px;
+}
 
 .pane-opened-libraries {
   position: relative;
@@ -553,6 +613,7 @@
   width: 350px;
   background-color: #dadada;
   border-radius: 5px;
+  overflow: hidden;
 }
 .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all h2 {
   padding-left: 10px;
