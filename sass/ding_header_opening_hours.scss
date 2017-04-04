@@ -26,7 +26,7 @@ $zen-columns:             12;
       width: 21%;
 
       + .topbar-menu {
-        @include zen-grid-item(2, 1,right);
+        @include zen-grid-item(2, 1, right);
       }
     }
   }
@@ -37,7 +37,7 @@ $zen-columns:             12;
         @include zen-grid-item(3, 6.5);
 
         + .topbar-menu {
-          @include zen-grid-item(4, 1,right);
+          @include zen-grid-item(4, 1, right);
         }
 
         #block-ding-header-opening-hours-ding-header-opened-today-all {
@@ -57,7 +57,7 @@ $zen-columns:             12;
         width: 30%;
 
         + .topbar-menu {
-          @include zen-grid-item(2, 1,right);
+          @include zen-grid-item(2, 1, right);
         }
 
         #block-ding-header-opening-hours-ding-header-opened-today-all {
@@ -75,7 +75,7 @@ $zen-columns:             12;
     width: 21%;
 
     + .topbar-menu {
-      @include zen-grid-item(2.8, 1,right);
+      @include zen-grid-item(2.8, 1, right);
     }
 
     @include medium() {
@@ -126,7 +126,7 @@ $zen-columns:             12;
       @include zen-grid-item (3, 4);
 
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
         margin-top: 0;
       }
 
@@ -186,7 +186,7 @@ $zen-columns:             12;
       width: 21%;
 
       + .topbar-menu {
-        @include zen-grid-item(3, 1,right);
+        @include zen-grid-item(3, 1, right);
       }
     }
 
@@ -195,7 +195,7 @@ $zen-columns:             12;
         display: none;
 
         + .topbar-menu {
-          @include zen-grid-item(6, 1,right);
+          @include zen-grid-item(6, 1, right);
         }
       }
 
@@ -210,7 +210,7 @@ $zen-columns:             12;
         display: none;
 
         + .topbar-menu {
-          @include zen-grid-item(6, 1,right);
+          @include zen-grid-item(6, 1, right);
         }
       }
 
@@ -246,14 +246,14 @@ $zen-columns:             12;
     width: 21%;
 
     + .topbar-menu {
-      @include zen-grid-item(5, 1,right);
+      @include zen-grid-item(5, 1, right);
     }
 
     @include medium() {
      @include zen-grid-item (4, 5);
 
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
       }
     }
 
@@ -261,7 +261,7 @@ $zen-columns:             12;
       @include zen-grid-item (3, 1);
 
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
         margin-top: 0;
       }
 
@@ -318,7 +318,7 @@ $zen-columns:             12;
       @include zen-grid-item(3, 4);
 
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
       }
     }
   }
@@ -333,7 +333,7 @@ $zen-columns:             12;
       @include zen-grid-item(3, 5.5);
 
       + .topbar-menu {
-        @include zen-grid-item(6, 1,right);
+        @include zen-grid-item(6, 1, right);
       }
     }
   }
