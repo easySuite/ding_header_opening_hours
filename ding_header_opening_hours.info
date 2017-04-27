@@ -1,8 +1,8 @@
 name = Ding Header Opening hours
 description = Displays an simplified Opening Hours block in site header.
 core = 7.x
-version = 7.x-1.0
-package = Ding!
+version = 7.x-3.0.2
+package = easyOPAC
 dependencies[] = panels
 dependencies[] = opening_hours
 dependencies[] = ding_library_opening_hours
