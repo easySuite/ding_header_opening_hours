@@ -140,7 +140,7 @@
     margin: 18px 0 0 0;
     font-size: 18px;
   }
-  .not-logged-in .pane-opened-libraries span.oh-plus:after {
+  .not-logged-in .pane-opened-libraries span.oh-clock:after {
     padding-left: 10px;
     margin-top: 18px;
     font-size: 18px;
@@ -197,7 +197,7 @@
     font-size: 16px;
     position: absolute;
   }
-  .not-logged-in .pane-opened-libraries span.oh-plus:after {
+  .not-logged-in .pane-opened-libraries span.oh-clock:after {
     padding-left: 10px;
     margin-top: 57px;
     font-size: 22px;
@@ -487,7 +487,7 @@
     font-size: 16px;
     position: absolute;
   }
-  .logged-in .pane-opened-libraries span.oh-plus:after {
+  .logged-in .pane-opened-libraries span.oh-clock:after {
     padding-left: 10px;
     margin-top: 55px;
     font-size: 20px;
@@ -595,7 +595,6 @@
 
 .pane-opened-libraries {
   position: relative;
-  color: #fff;
   padding-left: 15px;
 }
 .pane-opened-libraries .ohs-wrapper .oh-wrapper {
@@ -645,17 +644,16 @@
   display: inline-block;
   padding: 5px 0 5px 10px;
 }
-.pane-opened-libraries span.oh-plus:hover {
+.pane-opened-libraries span.oh-clock:hover {
   cursor: pointer;
 }
-.pane-opened-libraries span.oh-plus:after {
+.pane-opened-libraries span.oh-clock:after {
   font-family: "FontAwesome";
-  content: "\f055";
+  content: "\f017";
   padding-left: 10px;
   margin-top: 19px;
   position: absolute;
   display: inline;
-  color: white;
   font-size: 24px;
 }
 .pane-opened-libraries .left,

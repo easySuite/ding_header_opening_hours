@@ -87,7 +87,7 @@ $zen-columns:             12;
         font-size: 18px;
       }
 
-      span.oh-plus:after {
+      span.oh-clock:after {
         padding-left: 10px;
         margin-top: 18px;
         font-size: 18px;
@@ -136,7 +136,7 @@ $zen-columns:             12;
         position: absolute;
       }
 
-      span.oh-plus:after {
+      span.oh-clock:after {
         padding-left: 10px;
         margin-top: 57px;
         font-size: 22px;
@@ -301,7 +301,7 @@ $zen-columns:             12;
         position: absolute;
       }
 
-      span.oh-plus:after {
+      span.oh-clock:after {
         padding-left: 10px;
         margin-top: 55px;
         font-size: 20px;
@@ -381,7 +381,6 @@ $zen-columns:             12;
 
 .pane-opened-libraries {
   position: relative;
-  color: $white;
   padding-left: 15px;
 
   .ohs-wrapper {
@@ -446,19 +445,18 @@ $zen-columns:             12;
     }
   }
 
-  span.oh-plus {
+  span.oh-clock {
     &:hover {
       cursor: pointer;
     }
 
     &:after {
       font-family: "FontAwesome";
-      content: "\f055";
+      content: "\f017";
       padding-left: 10px;
       margin-top: 19px;
       position: absolute;
       display: inline;
-      color: white;
       font-size: 24px;
     }
   }

@@ -3,25 +3,27 @@
 
   Drupal.behaviors.ding_header_opening_hours = {
     attach: function(context, settings) {
-      $('.pane-opened-libraries .pane-title').once('opened', function() {
+      $('.pane-opened-libraries .pane-content').once('opened', function() {
         // Adding "plus" sign.
-        $('<span class="oh-plus"></span>').insertAfter($('.pane-opened-libraries .pane-title'));
+        $('<span class="oh-clock"></span>').insertAfter($('.pane-opened-libraries .pane-content'));
 
         $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
 
-        $('.pane-opened-libraries').on('mouseenter', function() {
+        $('#block-ding-header-opening-hours-ding-header-opened-today').on('mouseenter', function() {
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).show();
         });
 
-        $('.pane-opened-libraries').on('mouseleave', function() {
+        $('#block-ding-header-opening-hours-ding-header-opened-today').on('mouseleave', function() {
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
         });
 
-        $('.oh-plus').on('click', function() {
-          if(!$('body').hasClass('responsive-layout-mobile')) return;
+        $('.oh-clock').on('click', function() {
+          if(!$('body').hasClass('responsive-layout-mobile')) {
+            return;
+          }
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).toggle();
         });
       });
     }
   };
-})(jQuery)
+})(jQuery);
