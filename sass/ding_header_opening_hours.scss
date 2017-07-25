@@ -14,16 +14,36 @@ $black:                   #000;
 $gray-transparent-bg:     rgba( 0, 0, 0, 0.7);
 $zen-columns:             12;
 
+$tablet: "(max-width: 1025px)";
+
 .site-header .topbar .topbar-inner {
   overflow: visible;
   min-height: 89px;
 }
 
 .not-logged-in {
+  &.has-touch {
+    .pane-opened-libraries {
+      @media #{$tablet} {
+        @include zen-grid-item(3, 7);
+      }
+
+      #block-ding-header-opening-hours-ding-header-opened-today {
+        .left,
+        .right {
+          padding-right: 0;
+        }
+
+        .right {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
   &.page-search {
     .pane-opened-libraries {
-      @include zen-grid-item(3, 9.5);
-      width: 21%;
+      @include zen-grid-item(3, 7.8);
+    //  width: 21%;
 
       + .topbar-menu {
         @include zen-grid-item(2, 1, right);
@@ -34,7 +54,7 @@ $zen-columns:             12;
   @include small() {
     &.page-search {
       .pane-opened-libraries {
-        @include zen-grid-item(3, 6.5);
+        display: none;
 
         + .topbar-menu {
           @include zen-grid-item(4, 1, right);
@@ -53,7 +73,7 @@ $zen-columns:             12;
   @include medium() {
     &.page-search {
       .pane-opened-libraries {
-        @include zen-grid-item(3, 7.8);
+        @include zen-grid-item(3, 6);
         width: 30%;
 
         + .topbar-menu {
@@ -71,15 +91,15 @@ $zen-columns:             12;
   }
 
   .pane-opened-libraries {
-    @include zen-grid-item(3, 8.3);
-    width: 21%;
+    @include zen-grid-item(3, 7.8);
+   // width: 21%;
 
     + .topbar-menu {
       @include zen-grid-item(2.8, 1, right);
     }
 
     @include medium() {
-     @include zen-grid-item (3, 7.2);
+     @include zen-grid-item (3, 6);
       width: 31%;
 
       h2.opened-processed {
@@ -105,7 +125,7 @@ $zen-columns:             12;
         left: -30px;
 
         .ohs-wrapper .oh-row .right {
-          padding: 0 !important;
+          padding: 0;
          }
 
         .oh-row .left {
@@ -123,9 +143,9 @@ $zen-columns:             12;
     }
 
     @include small() {
-      @include zen-grid-item (3, 4);
+      //@include zen-grid-item (3, 4);
 
-      + .topbar-menu {
+      ~ .topbar-menu {
         @include zen-grid-item(6, 1, right);
         margin-top: 0;
       }
@@ -190,7 +210,7 @@ $zen-columns:             12;
 
   &.page-search.responsive-layout-tablet {
     .pane-opened-libraries {
-      @include zen-grid-item(3, 9);
+      @include zen-grid-item(3, 8);
 
       + .topbar-menu {
         @include zen-grid-item(3, 1, right);
@@ -205,15 +225,38 @@ $zen-columns:             12;
 }
 
 .logged-in {
+  .topbar .topbar-inner .pane-current-user-name {
+    display: none;
+  }
+
+  &.has-touch {
+    .pane-opened-libraries {
+       @media #{$tablet} {
+          @include zen-grid-item(3, 5);
+        }
+
+      #block-ding-header-opening-hours-ding-header-opened-today {
+        .left,
+        .right {
+          padding-right: 0;
+        }
+        .right {
+          margin-right: 25px;
+        }
+
+      }
+    }
+  }
+
   &.page-search {
     .pane-notifications-top-menu {
-      @include zen-grid-item(3, 6.5);
+      @include zen-grid-item(3, 6);
       width: 39%;
     }
 
     .pane-opened-libraries {
-      @include zen-grid-item(3, 6.5);
-      width: 21%;
+      @include zen-grid-item(3, 6);
+    //  width: 21%;
 
       + .topbar-menu {
         @include zen-grid-item(3, 1, right);
@@ -236,6 +279,10 @@ $zen-columns:             12;
     }
 
     @include small() {
+      .pane-current-user-name {
+        display: none;
+      }
+
       .pane-opened-libraries {
         display: none;
 
@@ -256,6 +303,10 @@ $zen-columns:             12;
   }
 
   @include medium() {
+    .pane-current-user-name {
+      display: none;
+    }
+
     .pane-notifications-top-menu {
       @include zen-grid-item(4, 6.2);
       position: absolute;
@@ -272,8 +323,8 @@ $zen-columns:             12;
   }
 
   .pane-opened-libraries {
-    @include zen-grid-item(3, 5.5);
-    width: 21%;
+    @include zen-grid-item(3, 6);
+//    width: 21%;
 
     + .topbar-menu {
       @include zen-grid-item(5, 1, right);
@@ -382,10 +433,19 @@ $zen-columns:             12;
 .pane-opened-libraries {
   position: relative;
   padding-left: 15px;
+  margin-top: 5px;
 
-  .ohs-wrapper {
-    .oh-wrapper {
-      line-height: 20px;
+  #block-ding-header-opening-hours-ding-header-opened-today {
+    .ohs-wrapper:first-child {
+      background: #ffffff;
+      padding: 8px 25px 5px 12px;
+      border-radius: 5px;
+      margin: 0 -30px;
+
+      .oh-wrapper {
+        line-height: 20px;
+        color: #a4a4a4;
+      }
     }
   }
 
@@ -399,15 +459,19 @@ $zen-columns:             12;
     #block-ding-header-opening-hours-ding-header-opened-today-all {
       position: absolute;
       z-index: 100;
-      width: 350px;
-      background-color: $light-gray;
+      width: calc(100% + 40px);
+      background-color: #f0f2f2;
       border-radius: 5px;
       overflow: hidden;
+      margin: 0 -30px;
+      padding-top: 10px;
+      box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.75);
 
       h2 {
         padding-left: 10px;
-        color: $darker-gray;
+        color: #676868;
         margin-bottom: 0;
+        font-size: 18px;
       }
 
       .content {
@@ -416,8 +480,9 @@ $zen-columns:             12;
 
       .ohs-wrapper {
         .oh-row-wrapper {
-          background: $lighter-gray;
+          background: $white;
           padding: 5px 0;
+          color: #a4a4a4;
 
           .oh-row {
             line-height: 10px;
@@ -425,27 +490,32 @@ $zen-columns:             12;
         }
 
         .oh-row-wrapper:nth-of-type(2n+2){
-          background: $light-gray;
+          background: #f0f2f2;
+          color: #a4a4a4;
         }
 
         .oh-row .right {
           float: right;
-          padding: 5px 10px 5px 0;
+          padding: 10px 10px 10px 0;
         }
 
         .oh-row .left {
           white-space: nowrap;
-          width: 15em;
           overflow: hidden;
           text-overflow: ellipsis;
           display: inline-block;
-          padding: 5px 0 5px 10px;
+          padding: 10px 18px;
+          vertical-align: middle;
         }
       }
     }
   }
 
   span.oh-clock {
+    position: absolute;
+    top: -3px;
+    right: 35px;
+
     &:hover {
       cursor: pointer;
     }
@@ -457,14 +527,19 @@ $zen-columns:             12;
       margin-top: 19px;
       position: absolute;
       display: inline;
-      font-size: 24px;
+      font-size: 30px;
+      color: #4d898e;
+
+      @include small-medium() {
+      display: none
+      }
     }
   }
 
   .left,
   .right {
     display: inline;
-    padding-right: 10px;
+    padding-right: 40px;
   }
 
   .oh-wrapper .right {

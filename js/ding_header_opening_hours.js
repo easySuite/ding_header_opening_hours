@@ -9,11 +9,11 @@
 
         $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
 
-        $('#block-ding-header-opening-hours-ding-header-opened-today').on('mouseenter', function() {
+        $('.pane-opened-libraries').on('mouseenter', function() {
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).show();
         });
 
-        $('#block-ding-header-opening-hours-ding-header-opened-today').on('mouseleave', function() {
+        $('.pane-opened-libraries').on('mouseleave', function() {
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
         });
 
