@@ -100,10 +100,12 @@ function template_preprocess_ding_header_opened_today_view(&$vars) {
       $opening_hours = opening_hours_instance_load_multiple(array_keys($libraries), $today, $today);
       $i = 0;
       foreach ($opening_hours as $hour) {
-        $libraries[$hour->nid]['opening_hours'][$i]['start_time'] = $hour->start_time;
-        $libraries[$hour->nid]['opening_hours'][$i]['end_time'] = $hour->end_time;
-        $libraries[$hour->nid]['opening_hours'][$i]['notice'] = $hour->notice;
-        $i++;
+        if ($i < 2) {
+          $libraries[$hour->nid]['opening_hours'][$i]['start_time'] = $hour->start_time;
+          $libraries[$hour->nid]['opening_hours'][$i]['end_time'] = $hour->end_time;
+          $libraries[$hour->nid]['opening_hours'][$i]['notice'] = $hour->notice;
+          $i++;
+        }
       }
     }
   }
