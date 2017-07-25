@@ -179,8 +179,7 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  .not-logged-in .pane-opened-libraries dispa
-  ~ .topbar-menu {
+  .not-logged-in .pane-opened-libraries ~ .topbar-menu {
     float: right;
     width: 50%;
     margin-right: 0%;

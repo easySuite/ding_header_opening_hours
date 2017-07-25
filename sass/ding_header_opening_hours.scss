@@ -144,7 +144,6 @@ $tablet: "(max-width: 1025px)";
 
     @include small() {
       //@include zen-grid-item (3, 4);
-      dispa
 
       ~ .topbar-menu {
         @include zen-grid-item(6, 1, right);
@@ -266,7 +265,7 @@ $tablet: "(max-width: 1025px)";
 
     @include medium() {
       .pane-opened-libraries {
-        display: none ;
+        display: none;
 
         + .topbar-menu {
           @include zen-grid-item(6, 1, right);
@@ -445,7 +444,7 @@ $tablet: "(max-width: 1025px)";
 
       .oh-wrapper {
         line-height: 20px;
-      color: #a4a4a4;
+        color: #a4a4a4;
       }
     }
   }
