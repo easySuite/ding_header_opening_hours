@@ -5,7 +5,7 @@
     attach: function(context, settings) {
       $('.pane-opened-libraries .pane-title').once('opened', function() {
         // Adding "plus" sign.
-        $('<span class="oh-plus"></span>').insertAfter($('.pane-opened-libraries .pane-title'));
+        $('<span class="icon-clock"></span>').insertBefore($('#block-ding-header-opening-hours-ding-header-opened-today'));
 
         $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
 
@@ -24,4 +24,4 @@
       });
     }
   };
-})(jQuery)
+})(jQuery);
