@@ -61,7 +61,7 @@ $tablet: "(max-width: 1024px)";
 
 .not-logged-in {
    .pane-opened-libraries {
-    @include zen-grid-item(3.5, 7);
+    @include zen-grid-item(3.8, 6.8);
     @include small-medium() {
       display: none;
      }
@@ -81,7 +81,7 @@ $tablet: "(max-width: 1024px)";
 
       .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
         .ohs-wrapper .oh-row .left {
-          width: 12em;
+          width: 11em;
         }
       }
     }
@@ -159,7 +159,7 @@ $tablet: "(max-width: 1024px)";
 
         .oh-row .left {
           white-space: nowrap;
-          width: 13em;
+          width: 12em;
           overflow: hidden;
           text-overflow: ellipsis;
           display: inline-block;
