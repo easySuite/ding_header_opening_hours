@@ -16,6 +16,8 @@ $gray-transparent-bg:     rgba( 0, 0, 0, 0.7);
 $zen-columns:             12;
 $color-primary: #4d898e;
 
+$tablet: "(max-width: 1024px)";
+
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?bueezz');
@@ -69,6 +71,26 @@ $color-primary: #4d898e;
 .logged-in {
   .pane-opened-libraries {
     @include zen-grid-item(3.2, 3);
+
+    @include small-medium() {
+      display: none;
+    }
+
+    @media #{$tablet} {
+      @include zen-grid-item(3.8, 4.6);
+
+      .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
+        .ohs-wrapper .oh-row .left {
+          width: 12em;
+        }
+      }
+    }
+  }
+
+  @media #{$tablet} {
+   .topbar-inner .panel-pane.pane-current-user-name {
+      display: none;
+    }
   }
 }
 
