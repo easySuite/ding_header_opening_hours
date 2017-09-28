@@ -124,8 +124,8 @@
 
 .not-logged-in .pane-opened-libraries {
   float: left;
-  width: 29.16667%;
-  margin-left: 50%;
+  width: 31.66667%;
+  margin-left: 48.33333%;
   margin-right: -100%;
   padding-left: 10px;
   padding-right: 10px;
@@ -168,7 +168,7 @@
     box-sizing: border-box;
   }
   .logged-in .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
-    width: 12em;
+    width: 11em;
   }
 }
 @media (max-width: 1024px) {
@@ -231,7 +231,7 @@
 }
 .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
   white-space: nowrap;
-  width: 13em;
+  width: 12em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
