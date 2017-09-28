@@ -150,6 +150,32 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 768px) {
+  .logged-in .pane-opened-libraries {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .logged-in .pane-opened-libraries {
+    float: left;
+    width: 31.66667%;
+    margin-left: 30%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .logged-in .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
+    width: 12em;
+  }
+}
+@media (max-width: 1024px) {
+  .logged-in .topbar-inner .panel-pane.pane-current-user-name {
+    display: none;
+  }
+}
 
 .pane-opened-libraries {
   position: relative;
