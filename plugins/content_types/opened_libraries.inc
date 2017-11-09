@@ -15,8 +15,6 @@ $plugin = array(
 function dhoh_pane_render() {
   $block = array();
 
-  $block['title'] = t('Opened today');
-
   // First (permanent) block.
   $main_lib = block_load('ding_header_opening_hours', 'ding_header_opened_today');
   $render_array = _block_get_renderable_array(_block_render_blocks(array($main_lib)));
