@@ -218,17 +218,17 @@
   padding: 5px 0;
   color: #a4a4a4;
 }
-.pane-opened-libraries .ohs-wrapper .oh-row-wrapper .oh-row {
-  line-height: 10px;
-}
 .pane-opened-libraries .ohs-wrapper .oh-row-wrapper:nth-of-type(2n+2) {
   background: #f1f2f2;
 }
-.pane-opened-libraries .ohs-wrapper .oh-row .right {
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper .oh-row {
+  line-height: 10px;
+}
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper .oh-row .right {
   float: right;
   padding: 10px 10px 10px 0;
 }
-.pane-opened-libraries .ohs-wrapper .oh-row .left {
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper .oh-row .left {
   white-space: nowrap;
   width: 12em;
   overflow: hidden;
