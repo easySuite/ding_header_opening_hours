@@ -3,9 +3,11 @@
 
   Drupal.behaviors.ding_header_opening_hours = {
     attach: function(context, settings) {
-      $('.pane-opened-libraries .pane-content').once('opened', function() {
-        // Adding "plus" sign.
+      // Move pane in the top bar menu.
+      $('li.topbar-link-opening-hours', context).find('a').replaceWith($('.pane-opened-libraries'));
 
+      $('.pane-opened-libraries', context).once('opened', function() {
+        // Adding "plus" sign.
         $('<span class="icon-clock"></span>').insertBefore($('#block-ding-header-opening-hours-ding-header-opened-today'));
 
         $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
@@ -18,10 +20,8 @@
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
         });
 
-        $('.oh-clock').on('click', function() {
-          if(!$('body').hasClass('responsive-layout-mobile')) {
-            return;
-          }
+        $('.oh-plus').on('click', function() {
+          if(!$('body').hasClass('responsive-layout-mobile')) return;
           $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).toggle();
         });
       });

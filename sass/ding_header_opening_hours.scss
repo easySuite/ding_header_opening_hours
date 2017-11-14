@@ -4,7 +4,7 @@ $grey-medium-transparent-bg:     rgba( 0, 0, 0, 0.7);
 
 .icon-clock {
   font-size: 55px;
-  margin-top: -10px;
+  margin-top: 8px;
   padding-left: 10px;
   color: $color-primary;
   float: right;
@@ -31,11 +31,6 @@ $grey-medium-transparent-bg:     rgba( 0, 0, 0, 0.7);
 }
 
 .not-logged-in {
-  .pane-opened-libraries {
-    @include span-columns(2 of 6);
-    position: absolute;
-    right: 200px;
-  }
 
   @include media($tablet) {
     .pane-opened-libraries {
@@ -53,6 +48,13 @@ $grey-medium-transparent-bg:     rgba( 0, 0, 0, 0.7);
 }
 
 .logged-in {
+  .topbar-inner {
+    ul.topbar-menu {
+      li.topbar-link-opening-hours {
+        display: block;
+      }
+    }
+  }
   .pane-opened-libraries {
     @include span-columns(2 of 6);
     position: absolute;
@@ -91,8 +93,13 @@ $grey-medium-transparent-bg:     rgba( 0, 0, 0, 0.7);
 }
 
 .pane-opened-libraries {
-  position: relative;
   padding-left: 15px;
+  float: left;
+  display: block;
+  margin-right: 5.10949%;
+  width: 29.92701%;
+  position: absolute;
+  right: 180px;
 
   .ohs-wrapper {
     .oh-wrapper {

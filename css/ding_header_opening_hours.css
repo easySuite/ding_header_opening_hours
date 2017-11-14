@@ -75,7 +75,7 @@
 }
 .icon-clock {
   font-size: 55px;
-  margin-top: -10px;
+  margin-top: 8px;
   padding-left: 10px;
   color: #4d898e;
   float: right;
@@ -97,17 +97,6 @@
   line-height: 40px;
 }
 
-.not-logged-in .pane-opened-libraries {
-  float: left;
-  display: block;
-  margin-right: 5.10949%;
-  width: 29.92701%;
-  position: absolute;
-  right: 200px;
-}
-.not-logged-in .pane-opened-libraries:last-child {
-  margin-right: 0;
-}
 @media screen and (max-width: 950px) {
   .not-logged-in .pane-opened-libraries {
     float: left;
@@ -126,6 +115,9 @@
   }
 }
 
+.logged-in .topbar-inner ul.topbar-menu li.topbar-link-opening-hours {
+  display: block;
+}
 .logged-in .pane-opened-libraries {
   float: left;
   display: block;
@@ -174,8 +166,13 @@
   }
 }
 .pane-opened-libraries {
-  position: relative;
   padding-left: 15px;
+  float: left;
+  display: block;
+  margin-right: 5.10949%;
+  width: 29.92701%;
+  position: absolute;
+  right: 180px;
 }
 .pane-opened-libraries .ohs-wrapper .oh-wrapper {
   line-height: 20px;
