@@ -1,7 +1,5 @@
 @import "../../../themes/ddbasic/sass/_base.scss";
 
-$grey-medium-transparent-bg:     rgba( 0, 0, 0, 0.7);
-
 .icon-clock {
   font-size: 55px;
   margin-top: -10px;
@@ -167,6 +165,6 @@ $grey-medium-transparent-bg:     rgba( 0, 0, 0, 0.7);
   }
 }
 
-li a.topbar-link-opening-hours {
+a.topbar-link-opening-hours {
   display: none;
 }
