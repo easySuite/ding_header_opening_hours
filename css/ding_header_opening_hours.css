@@ -75,7 +75,7 @@
 }
 .icon-clock {
   font-size: 55px;
-  margin-top: 8px;
+  margin-top: -10px;
   padding-left: 10px;
   color: #4d898e;
   float: right;
@@ -114,48 +114,16 @@
     width: 11em;
   }
 }
-
-.logged-in .topbar-inner ul.topbar-menu li.topbar-link-opening-hours {
-  display: block;
-}
-.logged-in .pane-opened-libraries {
-  float: left;
-  display: block;
-  margin-right: 5.10949%;
-  width: 29.92701%;
-  position: absolute;
-  left: 200px;
-}
-.logged-in .pane-opened-libraries:last-child {
-  margin-right: 0;
-}
 @media screen and (max-width: 1100px) {
-  .logged-in .pane-opened-libraries {
+  .not-logged-in .pane-opened-libraries {
     float: left;
     display: block;
     margin-right: 3.78378%;
     width: 35.13514%;
     margin-left: -85px;
   }
-  .logged-in .pane-opened-libraries:last-child {
+  .not-logged-in .pane-opened-libraries:last-child {
     margin-right: 0;
-  }
-}
-@media screen and (max-width: 950px) {
-  .logged-in .pane-opened-libraries {
-    float: left;
-    display: block;
-    margin-right: 4.34783%;
-    width: 40.37267%;
-    top: 74px;
-    z-index: 10;
-    margin-left: 30px;
-  }
-  .logged-in .pane-opened-libraries:last-child {
-    margin-right: 0;
-  }
-  .logged-in .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
-    width: 11em;
   }
 }
 
@@ -247,4 +215,8 @@
 }
 .pane-opened-libraries h2.opened-processed:hover {
   cursor: pointer;
+}
+
+li a.topbar-link-opening-hours {
+  display: none;
 }
