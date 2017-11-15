@@ -1,14 +1,3 @@
-/**
- * Mixins
- *
- * @author magnify
- */
-/* Breakpoints
-   ========================================================================== */
-/* Media query
-   ========================================================================== */
-/* Breakpoints
-   ========================================================================== */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -84,37 +73,16 @@
     opacity: 1;
   }
 }
-/* Colors variables
-   ========================================================================== */
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?bueezz");
-  src: url("../fonts/icomoon.eot?bueezz#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?bueezz") format("truetype"), url("../fonts/icomoon.woff?bueezz") format("woff"), url("../fonts/icomoon.svg?bueezz#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .icon-clock {
-  font-size: 24px;
+  font-size: 55px;
+  margin-top: -10px;
+  padding-left: 10px;
   color: #4d898e;
   float: right;
 }
-
 .icon-clock:before {
-  content: "\e920";
+  content: "\e90e";
+  font-family: 'icomoon';
 }
 
 .site-header .topbar .topbar-inner {
@@ -122,69 +90,61 @@
   min-height: 89px;
 }
 
-.not-logged-in .pane-opened-libraries {
-  float: left;
-  width: 31.66667%;
-  margin-left: 48.33333%;
-  margin-right: -100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+#block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper {
+  min-height: 48px;
 }
-@media only screen and (max-width: 768px) {
-  .not-logged-in .pane-opened-libraries {
-    display: none;
-  }
+#block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper div.oh-wrapper:first-child:nth-last-child(1) {
+  line-height: 40px;
 }
 
-.logged-in .pane-opened-libraries {
-  float: left;
-  width: 26.66667%;
-  margin-left: 16.66667%;
-  margin-right: -100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-@media only screen and (max-width: 768px) {
-  .logged-in .pane-opened-libraries {
-    display: none;
-  }
-}
-@media (max-width: 1024px) {
-  .logged-in .pane-opened-libraries {
+@media screen and (max-width: 950px) {
+  .not-logged-in .pane-opened-libraries {
     float: left;
-    width: 31.66667%;
-    margin-left: 30%;
-    margin-right: -100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    display: block;
+    margin-right: 4.34783%;
+    width: 40.37267%;
+    top: 74px;
+    z-index: 10;
+    margin-left: 105px;
   }
-  .logged-in .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
+  .not-logged-in .pane-opened-libraries:last-child {
+    margin-right: 0;
+  }
+  .not-logged-in .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
     width: 11em;
   }
 }
-@media (max-width: 1024px) {
-  .logged-in .topbar-inner .panel-pane.pane-current-user-name {
-    display: none;
+@media screen and (max-width: 1100px) {
+  .not-logged-in .pane-opened-libraries {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 35.13514%;
+    margin-left: -85px;
+  }
+  .not-logged-in .pane-opened-libraries:last-child {
+    margin-right: 0;
   }
 }
 
+@media screen and (max-width: 600px) {
+  .not-logged-in .pane-opened-libraries,
+  .logged-in .pane-opened-libraries {
+    display: none;
+  }
+}
 .pane-opened-libraries {
-  position: relative;
-  color: #fff;
   padding-left: 15px;
+  float: left;
+  display: block;
+  margin-right: 5.10949%;
+  width: 29.92701%;
+  position: absolute;
+  right: 180px;
 }
 .pane-opened-libraries .ohs-wrapper .oh-wrapper {
   line-height: 20px;
-  color: #333;
+  color: #808285;
 }
 .pane-opened-libraries .pane-title {
   display: none;
@@ -199,61 +159,52 @@
 }
 .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
   position: relative;
-  left: -3%;
+  left: 0;
   z-index: 100;
-  width: 106%;
-  background-color: #e5e5e5;
+  width: calc(100% + 20px);
+  background-color: #f1f2f2;
   border-radius: 5px;
   overflow: hidden;
+  margin: 0 -10px;
+  padding-top: 10px;
+  box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.75);
 }
 .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all h2 {
   padding-left: 10px;
-  color: #333;
+  color: #676868;
   margin-bottom: 0;
   font-size: 17px;
 }
 .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .content {
-  color: #333;
+  color: #808285;
 }
-.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row-wrapper {
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper {
   background: #fff;
   padding: 5px 0;
+  color: #a4a4a4;
 }
-.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row-wrapper .oh-row {
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper:nth-of-type(2n+2) {
+  background: #f1f2f2;
+}
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper .oh-row {
   line-height: 10px;
 }
-.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row-wrapper:nth-of-type(2n+2) {
-  background: #e5e5e5;
-}
-.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .right {
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper .oh-row .right {
   float: right;
-  padding: 5px 10px 5px 0;
+  padding: 10px 10px 10px 0;
 }
-.pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .left {
+.pane-opened-libraries .ohs-wrapper .oh-row-wrapper .oh-row .left {
   white-space: nowrap;
   width: 12em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
-  padding: 5px 0 5px 10px;
-}
-.pane-opened-libraries span.oh-plus:hover {
-  cursor: pointer;
-}
-.pane-opened-libraries span.oh-plus:after {
-  font-family: "FontAwesome";
-  content: "\f055";
-  padding-left: 10px;
-  margin-top: 19px;
-  position: absolute;
-  display: inline;
-  color: white;
-  font-size: 24px;
+  padding: 10px 18px;
+  vertical-align: middle;
 }
 .pane-opened-libraries .left,
 .pane-opened-libraries .right {
   display: inline;
-  padding-right: 10px;
 }
 .pane-opened-libraries .oh-wrapper .right {
   float: right;
@@ -264,4 +215,8 @@
 }
 .pane-opened-libraries h2.opened-processed:hover {
   cursor: pointer;
+}
+
+a.topbar-link-opening-hours {
+  display: none;
 }

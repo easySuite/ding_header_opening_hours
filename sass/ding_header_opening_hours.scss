@@ -1,108 +1,80 @@
-@import "zen-grids";
-@import "_mixins";
 @import "../../../themes/ddbasic/sass/_base.scss";
 
-/* Colors variables
-   ========================================================================== */
-
-$white:                   #fff;
-$dark-gray:               #ccc;
-$darker-gray:             #333;
-$light-gray:              #dadada;
-$lighter-gray:            #e5e5e5;
-$gray:                    #ccc;
-$black:                   #000;
-$gray-transparent-bg:     rgba( 0, 0, 0, 0.7);
-$zen-columns:             12;
-$color-primary: #4d898e;
-
-$tablet: "(max-width: 1024px)";
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?bueezz');
-  src:  url('../fonts/icomoon.eot?bueezz#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?bueezz') format('truetype'),
-  url('../fonts/icomoon.woff?bueezz') format('woff'),
-  url('../fonts/icomoon.svg?bueezz#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .icon-clock {
-  font-size: 24px;
+  font-size: 55px;
+  margin-top: -10px;
+  padding-left: 10px;
   color: $color-primary;
   float: right;
-}
-.icon-clock:before {
-  content: "\e920";
-}
 
+  &:before {
+    content: "\e90e";
+    font-family: 'icomoon';
+  }
+}
 
 .site-header .topbar .topbar-inner {
   overflow: visible;
   min-height: 89px;
 }
 
-.not-logged-in {
-   .pane-opened-libraries {
-    @include zen-grid-item(3.8, 6.8);
-    @include small-medium() {
-      display: none;
-     }
+#block-ding-header-opening-hours-ding-header-opened-today {
+  .ohs-wrapper {
+    min-height: 48px;
+
+    div.oh-wrapper:first-child:nth-last-child(1) {
+      line-height: 40px;
+    }
   }
 }
 
-.logged-in {
-  .pane-opened-libraries {
-    @include zen-grid-item(3.2, 3);
-
-    @include small-medium() {
-      display: none;
+.not-logged-in {
+  @include media($tablet) {
+    .pane-opened-libraries {
+      @include span-columns(3 of 7);
+      top: 74px;
+      z-index: 10;
+      margin-left: 105px;
     }
-
-    @media #{$tablet} {
-      @include zen-grid-item(3.8, 4.6);
-
-      .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
-        .ohs-wrapper .oh-row .left {
-          width: 11em;
-        }
+    .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
+      .ohs-wrapper .oh-row .left {
+        width: 11em;
       }
     }
   }
 
-  @media #{$tablet} {
-   .topbar-inner .panel-pane.pane-current-user-name {
+  @include media($notebook) {
+    .pane-opened-libraries {
+      @include span-columns(3 of 8);
+      margin-left: -85px;
+    }
+  }
+}
+
+@include media($mobile) {
+  .not-logged-in,
+  .logged-in {
+    .pane-opened-libraries {
       display: none;
     }
   }
 }
 
 .pane-opened-libraries {
-  position: relative;
-  color: $white;
   padding-left: 15px;
+  float: left;
+  display: block;
+  margin-right: 5.10949%;
+  width: 29.92701%;
+  position: absolute;
+  right: 180px;
 
   .ohs-wrapper {
     .oh-wrapper {
       line-height: 20px;
-      color: $darker-gray;
+      color: $grey-dark;
+
+
     }
   }
 
@@ -120,76 +92,63 @@ $tablet: "(max-width: 1024px)";
 
     #block-ding-header-opening-hours-ding-header-opened-today-all {
       position: relative;
-      left: -3%;
+      left: 0;
       z-index: 100;
-      width: 106%;
-      background-color: $lighter-gray;
+      width: calc(100% + 20px);
+      background-color: $grey-light;
       border-radius: 5px;
       overflow: hidden;
+      margin: 0 -10px;
+      padding-top: 10px;
+      box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.75);
 
       h2 {
         padding-left: 10px;
-        color: $darker-gray;
+        color: #676868;
         margin-bottom: 0;
         font-size: 17px;
       }
 
       .content {
-        color: $darker-gray;
+        color: $grey-dark;
+      }
+    }
+  }
+  
+  .ohs-wrapper {
+    .oh-row-wrapper {
+      background: $white;
+      padding: 5px 0;
+      color: #a4a4a4;
+
+      &:nth-of-type(2n+2) {
+        background: $grey-light;
       }
 
-      .ohs-wrapper {
-        .oh-row-wrapper {
-          background: $white;
-          padding: 5px 0;
+      .oh-row {
+        line-height: 10px;
 
-          .oh-row {
-            line-height: 10px;
-          }
-        }
-
-        .oh-row-wrapper:nth-of-type(2n+2){
-          background: $lighter-gray;
-        }
-
-        .oh-row .right {
+        .right {
           float: right;
-          padding: 5px 10px 5px 0;
+          padding: 10px 10px 10px 0;
         }
 
-        .oh-row .left {
+        .left {
           white-space: nowrap;
           width: 12em;
           overflow: hidden;
           text-overflow: ellipsis;
           display: inline-block;
-          padding: 5px 0 5px 10px;
+          padding: 10px 18px;
+          vertical-align: middle;
         }
       }
-    }
-  }
-
-  span.oh-plus {
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:after {
-      font-family: "FontAwesome";
-      content: "\f055";
-      padding-left: 10px;
-      margin-top: 19px;
-      position: absolute;
-      display: inline;
-      color: white;
-      font-size: 24px;
     }
   }
 
   .left,
   .right {
     display: inline;
-    padding-right: 10px;
   }
 
   .oh-wrapper .right {
@@ -204,4 +163,8 @@ $tablet: "(max-width: 1024px)";
       cursor: pointer;
     }
   }
+}
+
+a.topbar-link-opening-hours {
+  display: none;
 }
