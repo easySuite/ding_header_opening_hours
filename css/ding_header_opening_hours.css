@@ -73,27 +73,21 @@
     opacity: 1;
   }
 }
-.icon-clock {
+.topbar-link-opening-hours .icon-clock {
   font-size: 55px;
   margin-top: -10px;
   padding-left: 10px;
   color: #4d898e;
   float: right;
 }
-.icon-clock:before {
+.topbar-link-opening-hours .icon-clock:before {
   content: "\e90e";
   font-family: 'icomoon';
 }
-
-.site-header .topbar .topbar-inner {
-  overflow: visible;
-  min-height: 89px;
-}
-
-#block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper {
+.topbar-link-opening-hours #block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper {
   min-height: 48px;
 }
-#block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper div.oh-wrapper:first-child:nth-last-child(1) {
+.topbar-link-opening-hours #block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper div.oh-wrapper:first-child:nth-last-child(1) {
   line-height: 40px;
 }
 
@@ -179,8 +173,6 @@
   color: #808285;
 }
 .pane-opened-libraries .ohs-wrapper .oh-row-wrapper {
-  background: #fff;
-  padding: 5px 0;
   color: #a4a4a4;
 }
 .pane-opened-libraries .ohs-wrapper .oh-row-wrapper:nth-of-type(2n+2) {
