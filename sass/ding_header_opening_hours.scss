@@ -1,472 +1,148 @@
-@import "zen-grids";
-@import "_mixins";
+@import "../../../themes/ddbasic/sass/_base.scss";
 
-/* Colors variables
-   ========================================================================== */
 
-$white:                   #fff;
-$dark-gray:               #ccc;
-$darker-gray:             #333;
-$light-gray:              #dadada;
-$lighter-gray:            #e5e5e5;
-$gray:                    #ccc;
-$black:                   #000;
-$gray-transparent-bg:     rgba( 0, 0, 0, 0.7);
-$zen-columns:             12;
+.topbar-link-opening-hours {
+  .icon-clock {
+    font-size: 55px;
+    margin-top: -10px;
+    padding-left: 10px;
+    color: $color-primary;
+    float: right;
 
-.site-header .topbar .topbar-inner {
-  overflow: visible;
-  min-height: 89px;
+    &:before {
+      content: "\e90e";
+      font-family: 'icomoon';
+    }
+  }
+
+  #block-ding-header-opening-hours-ding-header-opened-today {
+    .ohs-wrapper {
+      min-height: 48px;
+
+      div.oh-wrapper:first-child:nth-last-child(1) {
+        line-height: 40px;
+      }
+    }
+  }
 }
 
 .not-logged-in {
-  &.page-search {
+  @include media($tablet) {
     .pane-opened-libraries {
-      @include zen-grid-item(3, 9.5);
-      width: 21%;
-
-      + .topbar-menu {
-        @include zen-grid-item(2, 1, right);
+      @include span-columns(3 of 7);
+      top: 74px;
+      z-index: 10;
+      margin-left: 105px;
+    }
+    .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
+      .ohs-wrapper .oh-row .left {
+        width: 11em;
       }
     }
   }
 
-  @include small() {
-    &.page-search {
-      .pane-opened-libraries {
-        @include zen-grid-item(3, 6.5);
-
-        + .topbar-menu {
-          @include zen-grid-item(4, 1, right);
-        }
-
-        #block-ding-header-opening-hours-ding-header-opened-today-all {
-          width: 300px !important;
-          position: absolute;
-          top: 85px;
-          left: -138px;
-        }
-      }
-    }
-  }
-
-  @include medium() {
-    &.page-search {
-      .pane-opened-libraries {
-        @include zen-grid-item(3, 7.8);
-        width: 30%;
-
-        + .topbar-menu {
-          @include zen-grid-item(2, 1, right);
-        }
-
-        #block-ding-header-opening-hours-ding-header-opened-today-all {
-          width: 300px !important;
-          position: absolute;
-          top: 85px;
-          left: -138px;
-        }
-      }
-    }
-  }
-
-  .pane-opened-libraries {
-    @include zen-grid-item(3, 8.3);
-    width: 21%;
-
-    + .topbar-menu {
-      @include zen-grid-item(2.8, 1, right);
-    }
-
-    @include medium() {
-     @include zen-grid-item (3, 7.2);
-      width: 31%;
-
-      h2.opened-processed {
-        margin: 18px 0 0 0;
-        font-size: 18px;
-      }
-
-      span.oh-plus:after {
-        padding-left: 10px;
-        margin-top: 18px;
-        font-size: 18px;
-        z-index: 10;
-      }
-
-      .left,
-      .right {
-        padding-right: 0;
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today-all {
-        width: 340px !important;
-        position: absolute;
-        left: -30px;
-
-        .ohs-wrapper .oh-row .right {
-          padding: 0 !important;
-         }
-
-        .oh-row .left {
-          width: 12em;
-        }
-
-        .oh-row-wrapper {
-          padding: 0;
-
-          .oh-row {
-            padding-right: 5px;
-          }
-        }
-      }
-    }
-
-    @include small() {
-      @include zen-grid-item (3, 4);
-
-      + .topbar-menu {
-        @include zen-grid-item(6, 1, right);
-        margin-top: 0;
-      }
-
-      h2.opened-processed {
-        margin: 46px 0 0 0;
-        font-size: 16px;
-        position: absolute;
-      }
-
-      span.oh-plus:after {
-        padding-left: 10px;
-        margin-top: 57px;
-        font-size: 22px;
-        right: 0;
-        z-index: 10;
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today-all {
-        width: 300px !important;
-        position: absolute;
-        top: 85px;
-        left: -70px;
-
-        .ohs-wrapper .oh-row .right {
-          padding: 5px 0 0 0 !important;
-        }
-
-        .oh-row .left {
-          width: 12em !important;
-        }
-
-        .oh-row-wrapper {
-          padding: 0;
-
-          .oh-row {
-            padding-right: 5px;
-          }
-        }
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today{
-        display: none;
-      }
-    }
-  }
-
-  &.responsive-layout-tablet {
+  @include media($notebook) {
     .pane-opened-libraries {
-      @include zen-grid-item(3, 7.5);
-
-      + .topbar-menu {
-        @include zen-grid-item(3, 1, right);
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today-all {
-        left: -63px;
-        top: 83px;
-      }
-    }
-  }
-
-  &.page-search.responsive-layout-tablet {
-    .pane-opened-libraries {
-      @include zen-grid-item(3, 9);
-
-      + .topbar-menu {
-        @include zen-grid-item(3, 1, right);
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today-all {
-        left: -63px;
-        top: 83px;
-      }
+      @include span-columns(3 of 8);
+      margin-left: -85px;
     }
   }
 }
 
-.logged-in {
-  &.page-search {
-    .pane-notifications-top-menu {
-      @include zen-grid-item(3, 6.5);
-      width: 39%;
-    }
-
+@include media($mobile) {
+  .not-logged-in,
+  .logged-in {
     .pane-opened-libraries {
-      @include zen-grid-item(3, 6.5);
-      width: 21%;
-
-      + .topbar-menu {
-        @include zen-grid-item(3, 1, right);
-      }
-    }
-
-    @include medium() {
-      .pane-opened-libraries {
-        display: none;
-
-        + .topbar-menu {
-          @include zen-grid-item(6, 1, right);
-        }
-      }
-
-      .pane-notifications-top-menu {
-        @include zen-grid-item(3, 3);
-        width: 65%;
-      }
-    }
-
-    @include small() {
-      .pane-opened-libraries {
-        display: none;
-
-        + .topbar-menu {
-          @include zen-grid-item(6, 1, right);
-        }
-      }
-
-      .pane-notifications-top-menu {
-        @include zen-grid-item(3, 2);
-        width: 65%;
-      }
-    }
-  }
-
-  .pane-notifications-top-menu {
-    @include zen-grid-item(3, 6.3);
-  }
-
-  @include medium() {
-    .pane-notifications-top-menu {
-      @include zen-grid-item(4, 6.2);
-      position: absolute;
-      top: 20px;
-    }
-  }
-
-  @include small() {
-    .pane-notifications-top-menu {
-      @include zen-grid-item(4, 3.5);
-      position: absolute;
-      top: 20px;
-    }
-  }
-
-  .pane-opened-libraries {
-    @include zen-grid-item(3, 5.5);
-    width: 21%;
-
-    + .topbar-menu {
-      @include zen-grid-item(5, 1, right);
-    }
-
-    @include medium() {
-     @include zen-grid-item (4, 5);
-
-      + .topbar-menu {
-        @include zen-grid-item(6, 1, right);
-      }
-    }
-
-    @include small() {
-      @include zen-grid-item (3, 1);
-
-      + .topbar-menu {
-        @include zen-grid-item(6, 1, right);
-        margin-top: 0;
-      }
-
-      h2.opened-processed {
-        margin: 50px 0 0 0;
-        font-size: 16px;
-        position: absolute;
-      }
-
-      span.oh-plus:after {
-        padding-left: 10px;
-        margin-top: 55px;
-        font-size: 20px;
-        right: 0;
-        z-index: 10;
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today-all {
-        width: 300px !important;
-        position: absolute;
-        top: 100px;
-        left: 35px;
-
-        .ohs-wrapper .oh-row .right {
-          padding: 5px 0 0 0 !important;
-        }
-
-        .oh-row .left {
-          width: 12em !important;
-        }
-
-        .oh-row-wrapper {
-          padding: 0;
-
-          .oh-row {
-            padding-right: 5px;
-          }
-        }
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today{
-        display: none;
-      }
-    }
-  }
-
-  &.responsive-layout-tablet {
-    .pane-notifications-top-menu {
-      @include zen-grid-item(3, 5);
-      width: 41%;
-    }
-
-    .pane-opened-libraries {
-      @include zen-grid-item(3, 4);
-
-      + .topbar-menu {
-        @include zen-grid-item(6, 1, right);
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today-all {
-        left: -63px;
-        top: 83px;
-      }
-    }
-  }
-
-  &.page-search.responsive-layout-tablet {
-    .pane-notifications-top-menu {
-      @include zen-grid-item(3, 6);
-      width: 41%;
-    }
-
-    .pane-opened-libraries {
-      @include zen-grid-item(3, 5.5);
-
-      + .topbar-menu {
-        @include zen-grid-item(6, 1, right);
-      }
-
-      #block-ding-header-opening-hours-ding-header-opened-today-all {
-        left: -63px;
-        top: 83px;
-      }
+      display: none;
     }
   }
 }
 
 .pane-opened-libraries {
-  position: relative;
-  color: $white;
   padding-left: 15px;
+  float: left;
+  display: block;
+  margin-right: 5.10949%;
+  width: 29.92701%;
+  position: absolute;
+  right: 180px;
 
   .ohs-wrapper {
     .oh-wrapper {
       line-height: 20px;
+      color: $grey-dark;
     }
   }
 
   .pane-title {
-    float: left;
+    display: none;
   }
 
   .pane-content {
     clear: both;
+    max-height: 56px;
+    background-color: $white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
 
     #block-ding-header-opening-hours-ding-header-opened-today-all {
-      position: absolute;
+      position: relative;
+      left: 0;
       z-index: 100;
-      width: 350px;
-      background-color: $light-gray;
+      width: calc(100% + 20px);
+      background-color: $grey-light;
       border-radius: 5px;
       overflow: hidden;
+      margin: 0 -10px;
+      padding-top: 10px;
+      box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.75);
 
       h2 {
         padding-left: 10px;
-        color: $darker-gray;
+        color: #676868;
         margin-bottom: 0;
+        font-size: 17px;
       }
 
       .content {
-        color: $darker-gray;
-      }
-
-      .ohs-wrapper {
-        .oh-row-wrapper {
-          background: $lighter-gray;
-          padding: 5px 0;
-
-          .oh-row {
-            line-height: 10px;
-          }
-        }
-
-        .oh-row-wrapper:nth-of-type(2n+2){
-          background: $light-gray;
-        }
-
-        .oh-row .right {
-          float: right;
-          padding: 5px 10px 5px 0;
-        }
-
-        .oh-row .left {
-          white-space: nowrap;
-          width: 15em;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: inline-block;
-          padding: 5px 0 5px 10px;
-        }
+        color: $grey-dark;
       }
     }
   }
+  
+  .ohs-wrapper {
+    .oh-row-wrapper {
+      color: #a4a4a4;
 
-  span.oh-plus {
-    &:hover {
-      cursor: pointer;
-    }
+      &:nth-of-type(2n+2) {
+        background: $grey-light;
+      }
 
-    &:after {
-      font-family: "FontAwesome";
-      content: "\f055";
-      padding-left: 10px;
-      margin-top: 19px;
-      position: absolute;
-      display: inline;
-      color: white;
-      font-size: 24px;
+      .oh-row {
+        line-height: 10px;
+
+        .right {
+          float: right;
+          padding: 10px 10px 10px 0;
+        }
+
+        .left {
+          white-space: nowrap;
+          width: 12em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+          padding: 10px 18px;
+          vertical-align: middle;
+        }
+      }
     }
   }
 
   .left,
   .right {
     display: inline;
-    padding-right: 10px;
   }
 
   .oh-wrapper .right {
@@ -481,4 +157,8 @@ $zen-columns:             12;
       cursor: pointer;
     }
   }
+}
+
+a.topbar-link-opening-hours {
+  display: none;
 }
