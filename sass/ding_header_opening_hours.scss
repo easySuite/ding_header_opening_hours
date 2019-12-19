@@ -1,4 +1,4 @@
-@import "../../../themes/ddbasic/sass/_base.scss";
+@import "../../ding2/themes/ddbasic/sass/_base.scss";
 
 .pane-opened-libraries {
   display: none;
@@ -6,6 +6,20 @@
 
 @include media($tablet-min-width) {
   .not-logged-in {
+    ul.topbar-menu {
+      @include span-columns(6);
+
+      &.topbar-link-user {
+        @include span-columns(1.5 of 4);
+      }
+
+      &.topbar-link-opening-hours {
+        @include span-columns(2.5 of 4);
+        margin-right: getGutter(4) / 2;
+        margin-left: 0;
+      }
+    }
+
     .topbar-link-opening-hours {
       .icon-clock {
         font-size: 55px;
@@ -31,35 +45,7 @@
       }
     }
 
-    @include media($tablet) {
-      .pane-opened-libraries {
-        @include span-columns(3 of 7);
-        top: 74px;
-        z-index: 10;
-        margin-left: 105px;
-      }
-      .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all {
-        .ohs-wrapper .oh-row .float-left {
-          width: 11em;
-        }
-      }
-    }
-
-    @include media($notebook) {
-      .pane-opened-libraries {
-        @include span-columns(3 of 8);
-        margin-left: -85px;
-      }
-    }
-
     .pane-opened-libraries {
-      padding-left: 15px;
-      float: left;
-      margin-right: 5.10949%;
-      width: 29.92701%;
-      position: absolute;
-      right: 180px;
-
       &.opened-processed {
         display: block;
       }
@@ -70,11 +56,10 @@
 
       .pane-content {
         clear: both;
-        max-height: 56px;
+        max-height: 55px;
         background-color: $white;
         border-radius: 5px;
         padding: 10px;
-        margin-top: 5px;
 
         .ohs-wrapper {
           .oh-wrapper {
@@ -84,10 +69,6 @@
 
           .oh-row-wrapper {
             color: #a4a4a4;
-
-            &:nth-of-type(2n+2) {
-              background: $grey-light;
-            }
 
             .oh-row {
               line-height: 10px;
