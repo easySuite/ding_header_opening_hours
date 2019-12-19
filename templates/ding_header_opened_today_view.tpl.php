@@ -12,17 +12,17 @@
     <?php foreach ($library['opening_hours'] as $key => $value): ?>
       <div class="oh-wrapper">
         <?php if ($key == 0): ?>
-          <div class="left"><?php print $library['title']; ?>:</div>
+          <div class="float-left"><?php print $library['title']; ?>:</div>
         <?php else: ?>
-          <div class="left"><?php print $value['notice']; ?>:</div>
+          <div class="float-left"><?php print $value['notice']; ?>:</div>
         <?php endif; ?>
-        <div class="right"><?php print $value['start_time']; ?> - <?php print $value['end_time']; ?></div>
+        <div class="float-right"><?php print $value['start_time']; ?> - <?php print $value['end_time']; ?></div>
       </div>
     <?php endforeach; ?>
   <?php else: ?>
     <div class="oh-wrapper">
-        <div class="left"><?php print $library['title']; ?></div>
-        <div class="right"><?php print t('Closed'); ?></div>
+        <div class="float-left"><?php print $library['title']; ?></div>
+        <div class="float-right"><?php print t('Closed'); ?></div>
     </div>
   <?php endif; ?>
 <?php endforeach; ?>
