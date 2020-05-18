@@ -3,31 +3,36 @@
 
   Drupal.behaviors.ding_header_opening_hours = {
     attach: function (context, settings) {
-      var $libraries_pane = $('.pane-opened-libraries', context);
       // Move pane in the top bar menu.
-      if ($libraries_pane.length > 0) {
-        $('li.topbar-link-opening-hours', context).find('a').replaceWith($libraries_pane);
-
-        $('.pane-opened-libraries', context).once('opened', function () {
-          // Adding "plus" sign.
-          $('<span class="icon-clock"></span>').insertBefore($('#block-ding-header-opening-hours-ding-header-opened-today'));
-
-          $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
-
-          $libraries_pane.on('mouseenter', function () {
-            $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).show();
-          });
-
-          $libraries_pane.on('mouseleave', function () {
-            $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).hide();
-          });
-
-          $('.oh-plus').on('click', function () {
-            if (!$('body').hasClass('responsive-layout-mobile')) return;
-            $('#block-ding-header-opening-hours-ding-header-opened-today-all', context).toggle();
-          });
-        });
+      var $opened_libraries = $('.pane-opened-libraries');
+      var $opening_hour_link = $('li.topbar-link-opening-hours', context);
+      if ($opening_hour_link.find('a').length < 1) {
+        return;
       }
+      $opening_hour_link.find('a').replaceWith($opened_libraries);
+
+      $('.pane-opened-libraries', context).once('opened', function () {
+        var $opened_libraries_allday = $('#block-ding-header-opening-hours-ding-header-opened-today-all', context);
+        // Adding "plus" sign.
+        $('<span class="icon-clock"></span>').insertBefore($('#block-ding-header-opening-hours-ding-header-opened-today'));
+
+        $opened_libraries_allday.hide();
+
+        $opened_libraries.on('mouseenter', function () {
+          $opened_libraries_allday.show();
+        });
+
+        $opened_libraries.on('mouseleave', function () {
+          $opened_libraries_allday.hide();
+        });
+
+        $('.oh-plus').on('click', function () {
+          if (!$('body').hasClass('responsive-layout-mobile')) {
+            return;
+          }
+          $opened_libraries_allday.toggle();
+        });
+      });
     }
   };
 })(jQuery);
