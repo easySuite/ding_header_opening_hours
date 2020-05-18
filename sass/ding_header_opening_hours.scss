@@ -73,7 +73,7 @@
         max-height: 56px;
         background-color: $white;
         border-radius: 5px;
-        padding: 17px;
+        padding: 10px;
         margin-top: 5px;
 
         .ohs-wrapper {
@@ -121,11 +121,11 @@
           position: relative;
           left: 0;
           z-index: 100;
-          width: calc(100% + 33px);
+          width: calc(100% + 20px);
           background-color: $grey-light;
           border-radius: 5px;
           overflow: hidden;
-          margin: 0 -17px;
+          margin: 0 -10px;
           padding-top: 10px;
           box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.75);
 
