@@ -9,7 +9,7 @@
       if ($opening_hour_link.find('a').length < 1) {
         return;
       }
-      $opening_hour_link.find('a').replaceWith($opened_libraries);
+      $opening_hour_link.find('a.topbar-link-opening-hours').replaceWith($opened_libraries);
 
       $('.pane-opened-libraries', context).once('opened', function () {
         var $opened_libraries_allday = $('#block-ding-header-opening-hours-ding-header-opened-today-all', context);
