@@ -93,6 +93,9 @@ a.gtflag {
   .not-logged-in .topbar-link-opening-hours .icon-clock:before {
     content: "\e90e";
     font-family: 'icomoon';
+    position: relative;
+    top: -30px;
+    right: 8px;
   }
   .not-logged-in .topbar-link-opening-hours #block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper {
     min-height: 48px;
@@ -166,7 +169,7 @@ a.gtflag {
     overflow: hidden;
     margin: 0 -10px;
     padding-top: 10px;
-    top: 0px;
+    top: -42px;
     box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.75);
   }
   .not-logged-in .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all h2 {
