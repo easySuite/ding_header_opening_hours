@@ -17,6 +17,9 @@
         &:before {
           content: "\e90e";
           font-family: 'icomoon';
+          position: relative;
+          top: -30px;
+          right: 8px;
         }
       }
 
@@ -108,7 +111,7 @@
           overflow: hidden;
           margin: 0 -10px;
           padding-top: 10px;
-          top: 0px;
+          top: -42px;
           box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.75);
 
           h2 {
