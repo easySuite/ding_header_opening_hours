@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a.gtflag {
+  display: inline-block;
+}
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -73,7 +77,120 @@
     opacity: 1;
   }
 }
-.pane-opened-libraries {
+html.a11y, html.a11y body {
+  font-size: 22px;
+  line-height: 26px;
+}
+html.a11y .search-form-extended.admin-menu .site-header .pane-search-form, html.a11y body .search-form-extended.admin-menu .site-header .pane-search-form {
+  top: 276px;
+}
+html.a11y select,
+html.a11y input[type="submit"],
+html.a11y input[type="text"],
+html.a11y input[type="text"]::placeholder,
+html.a11y .carousel-tabs .carousel-list-tabs .carousel-item a,
+html.a11y .panel-pane.pane-current-user-name h2,
+html.a11y .field-group-format.collapsible > h2, html.a11y body select,
+html.a11y body input[type="submit"],
+html.a11y body input[type="text"],
+html.a11y body input[type="text"]::placeholder,
+html.a11y body .carousel-tabs .carousel-list-tabs .carousel-item a,
+html.a11y body .panel-pane.pane-current-user-name h2,
+html.a11y body .field-group-format.collapsible > h2 {
+  font-size: 1rem;
+  line-height: 1.12rem;
+}
+html.a11y .ddb-btn, html.a11y body .ddb-btn {
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+html.a11y-contrast *,
+html.a11y-contrast input[type="text"]::placeholder {
+  color: #fffff1 !important;
+  background-color: #262626 !important;
+}
+html.a11y-contrast .node-ding-eresource.node-full > .inner > .buttons a::after {
+  color: #fffff1 !important;
+}
+html.a11y-contrast select {
+  background-color: transparent !important;
+  color: #fffff1 !important;
+}
+html.a11y-contrast ul.pager .pager-current {
+  background-color: #fffff1 !important;
+  color: #262626 !important;
+}
+html.a11y-contrast .ding_nodelist-node_blocks .text {
+  background: transparent !important;
+}
+html.a11y-contrast .ding_nodelist-node_blocks .text * {
+  background: transparent !important;
+}
+html.a11y-contrast article.node .event-text,
+html.a11y-contrast article.node .event-text * {
+  background: 0 0 !important;
+}
+html.a11y-contrast .view-ding-eresource .pager-previous a::after,
+html.a11y-contrast .view-ding-eresource .pager-next a::after,
+html.a11y-contrast .node-ding-eresource .buttons a,
+html.a11y-contrast .node-ding-event.node-teaser .background .button,
+html.a11y-contrast .more-link a,
+html.a11y-contrast .ding-carousel .slick-slider .slick-arrow.slick-next::after,
+html.a11y-contrast .ding-carousel .slick-slider .slick-arrow.slick-prev::after,
+html.a11y-contrast ul.pager li.pager-next a::after,
+html.a11y-contrast ul.pager li.pager-previous a::after,
+html.a11y-contrast #ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight,
+html.a11y-contrast .opening-hours-week .button-previous::after,
+html.a11y-contrast .opening-hours-week .button-next::after,
+html.a11y-contrast a.opening-hours-toggle.collapsed::after,
+html.a11y-contrast a.opening-hours-toggle::after,
+html.a11y-contrast .no-touch .ding_nodelist-node_blocks .ding_nodelist-items .nb-item.is-hovered .background,
+html.a11y-contrast .no-touch .ding_nodelist-node_blocks .ding_nodelist-items .nb-item:hover .background,
+html.a11y-contrast article.node-ding-event.node-teaser a:hover .inner,
+html.a11y-contrast article.node-ding-event.node-teaser a:hover .event-text,
+html.a11y-contrast article.node-ding-event.node-teaser a:hover .background {
+  background-color: #262626 !important;
+}
+html.a11y-contrast #ui-datepicker-div .ui-datepicker-calendar td a:hover,
+html.a11y-contrast .more-link a:hover,
+html.a11y-contrast .more-link a:hover::after,
+html.a11y-contrast .nb-item .button,
+html.a11y-contrast article.node a:hover .background .button,
+html.a11y-contrast input[type="submit"],
+html.a11y-contrast .no-touch a.opening-hours-toggle:hover::after,
+html.a11y-contrast .no-touch .opening-hours-week .button-previous:hover::after,
+html.a11y-contrast .no-touch .opening-hours-week .button-next:hover::after {
+  background-color: #262625 !important;
+}
+html.a11y-contrast .nb-item .button,
+html.a11y-contrast .node-ding-event.node-teaser .background .button {
+  z-index: 5;
+}
+
+.a11y-controls {
+  background-color: #4d898e;
+  position: fixed;
+  left: 1%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.a11y-controls a {
+  font-size: 1.5rem;
+  color: #fffff1;
+  text-align: center;
+}
+.a11y-controls a.font-size-trigger::before {
+  content: 'a';
+}
+.a11y-controls a.contrast-trigger::before {
+  content: '\263c';
+}
+
+.not-logged-in .pane-opened-libraries.opened-processed {
   display: none;
 }
 
@@ -95,44 +212,13 @@
   .not-logged-in .topbar-link-opening-hours #block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper div.oh-wrapper:first-child:nth-last-child(1) {
     line-height: 40px;
   }
-}
-@media screen and (min-width: 950px) and (max-width: 950px) {
-  .not-logged-in .pane-opened-libraries {
-    float: left;
-    display: block;
-    margin-right: 4.34783%;
-    width: 40.37267%;
-    top: 74px;
-    z-index: 10;
-    margin-left: 105px;
-  }
-  .not-logged-in .pane-opened-libraries:last-child {
-    margin-right: 0;
-  }
-  .not-logged-in .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .float-left {
-    width: 11em;
-  }
-}
-@media screen and (min-width: 950px) and (max-width: 1100px) {
-  .not-logged-in .pane-opened-libraries {
-    float: left;
-    display: block;
-    margin-right: 3.78378%;
-    width: 35.13514%;
-    margin-left: -85px;
-  }
-  .not-logged-in .pane-opened-libraries:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 950px) {
   .not-logged-in .pane-opened-libraries {
     padding-left: 15px;
     float: left;
     margin-right: 5.10949%;
     width: 29.92701%;
     position: absolute;
-    right: 180px;
+    right: 190px;
   }
   .not-logged-in .pane-opened-libraries.opened-processed {
     display: block;
@@ -147,6 +233,8 @@
     border-radius: 5px;
     padding: 10px;
     margin-top: 5px;
+    min-width: 360px;
+    position: relative;
   }
   .not-logged-in .pane-opened-libraries .pane-content .ohs-wrapper .oh-wrapper {
     line-height: 20px;
@@ -190,6 +278,7 @@
     overflow: hidden;
     margin: 0 -10px;
     padding-top: 10px;
+    top: 0px;
     box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.75);
   }
   .not-logged-in .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all h2 {
@@ -207,5 +296,10 @@
   }
   .not-logged-in a.topbar-link-opening-hours {
     display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .not-logged-in .pane-opened-libraries.opened-processed {
+    right: 215px;
   }
 }
