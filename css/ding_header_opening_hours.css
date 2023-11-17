@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a.gtflag {
+  display: inline-block;
+}
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -73,7 +77,8 @@
     opacity: 1;
   }
 }
-.pane-opened-libraries {
+
+.not-logged-in .pane-opened-libraries.opened-processed {
   display: none;
 }
 
@@ -88,6 +93,9 @@
   .not-logged-in .topbar-link-opening-hours .icon-clock:before {
     content: "\e90e";
     font-family: 'icomoon';
+    position: relative;
+    top: -30px;
+    right: 8px;
   }
   .not-logged-in .topbar-link-opening-hours #block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper {
     min-height: 48px;
@@ -95,44 +103,13 @@
   .not-logged-in .topbar-link-opening-hours #block-ding-header-opening-hours-ding-header-opened-today .ohs-wrapper div.oh-wrapper:first-child:nth-last-child(1) {
     line-height: 40px;
   }
-}
-@media screen and (min-width: 950px) and (max-width: 950px) {
-  .not-logged-in .pane-opened-libraries {
-    float: left;
-    display: block;
-    margin-right: 4.34783%;
-    width: 40.37267%;
-    top: 74px;
-    z-index: 10;
-    margin-left: 105px;
-  }
-  .not-logged-in .pane-opened-libraries:last-child {
-    margin-right: 0;
-  }
-  .not-logged-in .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all .ohs-wrapper .oh-row .float-left {
-    width: 11em;
-  }
-}
-@media screen and (min-width: 950px) and (max-width: 1100px) {
-  .not-logged-in .pane-opened-libraries {
-    float: left;
-    display: block;
-    margin-right: 3.78378%;
-    width: 35.13514%;
-    margin-left: -85px;
-  }
-  .not-logged-in .pane-opened-libraries:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 950px) {
   .not-logged-in .pane-opened-libraries {
     padding-left: 15px;
     float: left;
     margin-right: 5.10949%;
     width: 29.92701%;
     position: absolute;
-    right: 180px;
+    right: 190px;
   }
   .not-logged-in .pane-opened-libraries.opened-processed {
     display: block;
@@ -147,6 +124,8 @@
     border-radius: 5px;
     padding: 10px;
     margin-top: 5px;
+    min-width: 360px;
+    position: relative;
   }
   .not-logged-in .pane-opened-libraries .pane-content .ohs-wrapper .oh-wrapper {
     line-height: 20px;
@@ -190,6 +169,7 @@
     overflow: hidden;
     margin: 0 -10px;
     padding-top: 10px;
+    top: -42px;
     box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 0.75);
   }
   .not-logged-in .pane-opened-libraries .pane-content #block-ding-header-opening-hours-ding-header-opened-today-all h2 {
@@ -207,5 +187,10 @@
   }
   .not-logged-in a.topbar-link-opening-hours {
     display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .not-logged-in .pane-opened-libraries.opened-processed {
+    right: 215px;
   }
 }
