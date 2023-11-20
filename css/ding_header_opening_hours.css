@@ -110,6 +110,8 @@ a.gtflag {
     width: 29.92701%;
     position: absolute;
     right: 180px;
+    word-spacing: normal;
+    letter-spacing: normal;
   }
   .not-logged-in .pane-opened-libraries.opened-processed {
     display: block;
