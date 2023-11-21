@@ -40,7 +40,9 @@
       margin-right: 5.10949%;
       width: 29.92701%;
       position: absolute;
-      right: 190px;
+      right: 180px;
+      word-spacing: normal;
+      letter-spacing: normal;
 
       &.opened-processed {
         display: block;
@@ -57,7 +59,8 @@
         border-radius: 5px;
         padding: 10px;
         margin-top: 5px;
-        min-width: 360px;
+        min-width: 325px;
+        max-height: 58px;
         position: relative;
 
         .ohs-wrapper {
@@ -111,7 +114,7 @@
           overflow: hidden;
           margin: 0 -10px;
           padding-top: 10px;
-          top: -42px;
+          top: -54px;
           box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.75);
 
           h2 {
